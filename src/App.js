@@ -4,7 +4,7 @@ import Login from "./Components/Login";
 import SingUp from "./Components/SIgnup";
 import Profile from "./Components/Profile";
 import Settings from "./Components/Settings";
-import {useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [users, setUsers] = useState([
@@ -42,6 +42,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <p>start</p>
       <Routes>
         <Route path="/" element={<Login data={users} />} />
         <Route path="/signup" element={<SingUp add={addNewUser} />} />
