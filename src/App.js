@@ -4,7 +4,7 @@ import Login from "./Components/Login";
 import SingUp from "./Components/Signup";
 import Profile from "./Components/Profile";
 import Settings from "./Components/Settings";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 
 function App() {
   const [users, setUsers] = useState([
