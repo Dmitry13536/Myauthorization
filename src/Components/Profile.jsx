@@ -16,7 +16,7 @@ const Profile = ({ data = [] }) => {
   if (!user) {
     return (
       <div className="profile">
-        <p>Пользователь не найден</p>
+        <p>User is not found.</p>
         <MyButton onClick={() => NavigateTo("/")}>На главную</MyButton>
       </div>
     );
