@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React, { useEffect, useState } from "react";
+>>>>>>> 266c88a477f4b28b6aec7dfe8e37c3eca1ee32ea
 import { Link } from "react-router-dom";
 import MyInput from "../UI/input/MyInput";
 import MyButton from "../UI/button/MyButton";

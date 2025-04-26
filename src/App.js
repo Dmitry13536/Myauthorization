@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Login from "./Components/Login";
 import SingUp from "./Components/Signup";
+import SingUp from "./Components/Signup";
 import Profile from "./Components/Profile";
 import Settings from "./Components/Settings";
 import {useState } from "react";
@@ -12,12 +13,14 @@ function App() {
       id: 1,
       email: "aaa",
       password: "1234",
+      password: "1234",
       name: "Ddvdvima",
       surname: "Sadvdvrychev",
     },
     {
       id: 2,
       email: "ddd",
+      password: "123",
       password: "123",
       name: "Dimwwda",
       surname: "Sarywdwdchev",
@@ -43,6 +46,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Login data={users} />} />
+        <Route path="/signup" element={<SingUp add={addNewUser} />} />
+        <Route path="/:id" element={<Profile data={users} />} />
+        <Route path="/settings/:id" element={<Settings del={deleteUser} />} />
         <Route path="/" element={<Login data={users} />} />
         <Route path="/signup" element={<SingUp add={addNewUser} />} />
         <Route path="/:id" element={<Profile data={users} />} />
