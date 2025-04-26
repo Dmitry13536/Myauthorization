@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Login from "./Components/Login";
 import SingUp from "./Components/Signup";
-import SingUp from "./Components/Signup";
 import Profile from "./Components/Profile";
 import Settings from "./Components/Settings";
 import {useState } from "react";
