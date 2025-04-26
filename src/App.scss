@@ -48,6 +48,10 @@
     align-items: center;
     margin-bottom: 70px;
   }
+
+  &__name{
+    display: flex;
+  }
 }
 
 .profile {
@@ -83,6 +87,9 @@
 .m-10{
   margin: 10px 0;
 }
+.my-5{
+  margin: 0 5px 0 0;
+}
 
 .bg-red{
   background-color: #EE5050;
@@ -92,4 +99,9 @@
 .bg-grey{
   background-color: #D9D9D9;
   color: #000000;
+}
+
+.alert{
+  color: #EE5050;
+  font-size: 16px;
 }

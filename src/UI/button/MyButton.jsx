@@ -3,7 +3,7 @@ import styles from './MyButton.module.scss';
 
 const MyButton = ({children, className='', colors=false, ...props}) => {
     return (
-      <button
+      <button 
         className={
           colors
             ? `${className} ${styles.button}`

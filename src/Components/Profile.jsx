@@ -20,8 +20,8 @@ const Profile = ({data}) => {
           <p className="profile__fullname--surname">{user.surname}</p>
         </div>
         <div className="profile__actions">
-          <MyButton className="m-10">My achievements</MyButton>
-          <MyButton className="m-10">My tasks</MyButton>
+          <MyButton disabled className="m-10">My achievements</MyButton>
+          <MyButton disabled className="m-10">My tasks</MyButton>
           <MyButton className="m-10" onClick={() => NavigateTo(`/settings/${id}`)}>
             Settings
           </MyButton>
