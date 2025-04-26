@@ -42,7 +42,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <p>start</p>
       <Routes>
         <Route path="/" element={<Login data={users} />} />
         <Route path="/signup" element={<SingUp add={addNewUser} />} />
