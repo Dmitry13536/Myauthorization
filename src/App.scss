@@ -12,33 +12,43 @@
 .profile,
 .singup,
 .login {
+  width: 360px;
   position: absolute;
-  width: 500px;
+  padding: 30px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 8px 3px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 1px 1px 8px 3px rgba(34, 60, 80, 0.2);
+  box-shadow: 1px 1px 8px 3px rgba(34, 60, 80, 0.2);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 46px;
-  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.26);
+  background-color: #fff;
 
   &__title {
-    font-size: 64px;
-    margin-bottom: 45px;
+    opacity: 0.5;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   &__inputs {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 32px;
   }
 
-  & .link {
-    margin-top: 20%;
+  .link {
+    align-items: center;
+    width: 100%;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__options {
@@ -55,11 +65,15 @@
 }
 
 .profile {
-  width: 44%;
+  &__data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &--avatar {
-    margin-top: 24px;
     width: 40%;
+    margin-top: 24px;
     border-radius: 100%;
     box-shadow: 0 2px 21px 4px rgba(0, 0, 0, 0.26);
   }
@@ -114,13 +128,5 @@
     width: 300px;
     margin: 5% 0;
     padding: 23px;
-
-    &__title {
-      font-size: 32px;
-    }
-
-    & .link {
-      margin-top: 10px;
-    }
   }
 }

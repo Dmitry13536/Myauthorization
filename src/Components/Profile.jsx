@@ -24,7 +24,7 @@ const Profile = ({ data = [] }) => {
 
   return (
     <div className="profile">
-      <p className="profile__title">Profile</p>
+      <p className="profile__title">Личный кабинет</p>
       <div className="profile__data">
         <img src={avatar} alt="avatar" className="profile--avatar" />
         <div className="profile__fullname">
@@ -44,7 +44,7 @@ const Profile = ({ data = [] }) => {
             className="m-10"
             onClick={() => NavigateTo(`/settings/${id}`)}
           >
-            Settings
+            Настройки
           </MyButton>
         </div>
       </div>
@@ -53,4 +53,3 @@ const Profile = ({ data = [] }) => {
 };
 
 export default Profile;
-// помог gpt потому что я уже пол дня сижу и тут опять какаято хз ошибка и мне в падлу разбиратся
