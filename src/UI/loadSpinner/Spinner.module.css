@@ -1,0 +1,8 @@
+.spinner {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 42.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

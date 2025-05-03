@@ -1,14 +1,4 @@
 .input{
-    // background: transparent;
-    // border: 2px solid rgba(0, 0, 0, 0.27);
-    // border-radius: 22px;
-    // padding: 31px 0 31px 15px;
-    // margin-bottom: 14px;
-    // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    // outline: none;
-    // width: 100%;
-    // font-size: 32px;
-
      display: block;
         width: 100%;
         height: calc(2.25rem + 2px);
@@ -35,3 +25,10 @@
     }
 }
 
+.red{
+    border: 1px solid rgb(255, 79, 79)
+}
+
+.green{
+    border: 1px solid #99ff99;
+}

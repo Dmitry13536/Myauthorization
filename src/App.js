@@ -5,6 +5,7 @@ import SingUp from "./Components/SIgnup";
 import Profile from "./Components/Profile";
 import Settings from "./Components/Settings";
 import { useState } from "react";
+import ShowUsers from "./Components/ShowUsers";
 
 function App() {
   const [users, setUsers] = useState([
@@ -14,6 +15,7 @@ function App() {
       password: "1234",
       name: "Ddvdvima",
       surname: "Sadvdvrychev",
+      father: "/dsdsdsdsdds"
     },
     {
       id: 2,
@@ -21,6 +23,7 @@ function App() {
       password: "123",
       name: "Dimwwda",
       surname: "Sarywdwdchev",
+      father: "/dsdsdsdsdds"
     },
   ]);
 
@@ -47,6 +50,7 @@ function App() {
         <Route path="/signup" element={<SingUp add={addNewUser} />} />
         <Route path="/:id" element={<Profile data={users} />} />
         <Route path="/settings/:id" element={<Settings del={deleteUser} />} />
+        <Route path="/showusers/:id" element={<ShowUsers users={users} />} />
       </Routes>
     </BrowserRouter>
   );

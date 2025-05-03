@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MyInput from "../UI/input/MyInput";
 import MyButton from "../UI/button/MyButton";
 import { Link } from "react-router-dom";
@@ -7,12 +7,19 @@ import { useMyNavigate } from "../useMyNavigate";
 const Login = ({ data }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [alert, setAlert] = useState("");
+  const [alert, setAlert] = useState("n");
 
   const NavigateTo = useMyNavigate();
 
-  const tryToLogIn = () => {
-    setAlert("");
+  useEffect(() => {
+    setTimeout(() => {
+      setAlert("n");
+    }, 5000);
+  }, [alert]);
+
+  const tryToLogIn = (event) => {
+    event.preventDefault();
+    setAlert("n");
     if (!email || !password) {
       setAlert("Fill all the fields");
       return null;
@@ -37,8 +44,9 @@ const Login = ({ data }) => {
         <p className="login__title">Авторизоваться</p>
         <form className="login__wrapper">
           <div className="login__inputs">
-            {alert && <p className="alert">{alert}</p>}
+            <p className={`${alert==='n'? 'hide' : 'alert' }`}>{alert}</p>
             <MyInput
+              cond={email.length >= 5 && email.includes("@")}
               required
               type="email"
               placeholder="Введите имя или email"

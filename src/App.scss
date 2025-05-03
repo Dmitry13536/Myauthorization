@@ -27,7 +27,7 @@
   &__title {
     opacity: 0.5;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 
   &__wrapper {
@@ -65,6 +65,8 @@
 }
 
 .profile {
+  width: min-content;
+
   &__data {
     display: flex;
     flex-direction: column;
@@ -118,6 +120,12 @@
 .alert {
   color: #ee5050;
   font-size: 16px;
+  opacity: 1;
+  transition: opacity ease-in .3s;
+}
+
+.hide{
+  opacity: 0;
 }
 
 @media (max-width: 600px) {
@@ -129,4 +137,18 @@
     margin: 5% 0;
     padding: 23px;
   }
+}
+
+table{
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+th,td{
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  padding: 5px;
+}
+
+tbody{
+  overflow-y: scroll;
 }

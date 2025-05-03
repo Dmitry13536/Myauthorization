@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import avatar from "../assets/avatar-placeholder.png";
 import MyButton from "../UI/button/MyButton";
 import { useMyNavigate } from "../useMyNavigate";
 import { useParams } from "react-router-dom";
 
 const Profile = ({ data = [] }) => {
-  // Защита от undefined
   const NavigateTo = useMyNavigate();
   const { id } = useParams();
 
-  // Находим пользователя с защитой от ошибок
   const user = data.find((user) => user.id === Number(id));
 
-  // Если пользователь не найден
+  useEffect(() => {
+    if (!user) NavigateTo("/");
+  }, []);
+
   if (!user) {
+    //optional
     return (
       <div className="profile">
         <p>User is not found.</p>
@@ -34,8 +36,11 @@ const Profile = ({ data = [] }) => {
           </p>
         </div>
         <div className="profile__actions">
-          <MyButton disabled className="m-10">
-            My achievements
+          <MyButton
+            className="m-10"
+            onClick={() => NavigateTo(`/showusers/${id}`)}
+          >
+            Пользователи
           </MyButton>
           <MyButton disabled className="m-10">
             My tasks
