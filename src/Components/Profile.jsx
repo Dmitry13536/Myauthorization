@@ -12,7 +12,7 @@ const Profile = ({ data = [] }) => {
 
   useEffect(() => {
     if (!user) NavigateTo("/");
-  }, []);
+  }, [user, NavigateTo]);
 
   if (!user) {
     //optional
